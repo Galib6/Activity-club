@@ -54,5 +54,21 @@
     "for_Age": "20-25",
     "time_req": 30,
     "id": 106
+  },
+  {
+    "activity_name": "Dumbel",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint vel inventore, veniam officiis sapiente?",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5miPRoc_3tWVnEnIAlpJVz-oCQD9n7MZtuw&usqp=CAU",
+    "for_Age": "20-25",
+    "time_req": 30,
+    "id": 106
+  },
+  {
+    "activity_name": "Dumbel",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint vel inventore, veniam officiis sapiente?",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5miPRoc_3tWVnEnIAlpJVz-oCQD9n7MZtuw&usqp=CAU",
+    "for_Age": "20-25",
+    "time_req": 30,
+    "id": 106
   }
 ]

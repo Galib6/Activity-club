@@ -46,23 +46,23 @@ const Sidebar = (props) => {
                 </div>
             </div>
 
-            <div className='d-flex justify-content-center mt-4 spec align-items-center mx-2 w-100 border border-primary'>
-                <div className='d-flex flex-column px-3 pt-3 '>
-                    <h4 className='text-center'>75kg</h4>
+            <div className='d-flex justify-content-center mt-4 spec align-items-center w-80 border border-primary'>
+                <div className='d-flex flex-column pt-3 px-3 '>
+                    <h4 className='text-center'>75KG</h4>
                     <p className='text-center'>Weight</p>
                 </div>
                 <div className='d-flex flex-column pt-3 px-3'>
-                    <h4 className='text-center'>6.5</h4>
+                    <h4 className='text-center'>6.5Ft</h4>
                     <p className='text-center'>Height</p>
                 </div>
                 <div className='d-flex flex-column pt-3 px-3'>
-                    <h4 className='text-center'>25yrs</h4>
+                    <h4 className='text-center'>25Years</h4>
                     <p className='text-center'>Age</p>
                 </div>
 
             </div>
 
-            <div className='mt-5 '>
+            <div className='mt-5 order '>
                 <h4 className='px-3'>Add A Break</h4>
                 <div className='btns mt-3 d-flex justify-content-center'>
                     <button onClick={() => BreakTimeSet(10)}>10s</button>
@@ -82,7 +82,7 @@ const Sidebar = (props) => {
                 </div>
 
             </div>
-            <div>
+            <div className='d-flex justify-content-center'>
                 <Button variant="primary" className='w-70 mt-5 mx-5' onClick={notify}>Activity Completed</Button>
                 <ToastContainer />
             </div>
