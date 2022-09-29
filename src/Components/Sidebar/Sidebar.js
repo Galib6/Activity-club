@@ -1,31 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Sidebar.css"
 import Button from 'react-bootstrap/Button';
 import Exercise_Time from '../Excercise_time/Exercise_Time';
 
 const Sidebar = (props) => {
 
-    const breakTimeSet = () => {
+    const [breakTime, setBreakTime] = useState(0)
 
-    }
+    useEffect(() => {
+        const breakTimeInfoStrigified = localStorage.getItem('break-Time-Info');
+        if (breakTimeInfoStrigified) {
+            const breakTimeInfo = JSON.parse(breakTimeInfoStrigified);
+            const breaKTime = breakTimeInfo[1]
+            setBreakTime(breaKTime)
+        }
+    }, [])
 
-
+    console.log(breakTime)
 
     // Add to Db  
-    const addToDb = time => {
+    const addToDb = (time) => {
         const breakTimeInfo = {}
-
-        // adding to db
-        const seq = 1;
-        breakTimeInfo[time] = seq;
-
+        breakTimeInfo[1] = time;
         console.log(breakTimeInfo)
-
-        localStorage.setItem('breakTimeInfo', JSON.stringify(breakTimeInfo));
-
-
+        localStorage.setItem('break-Time-Info', JSON.stringify(breakTimeInfo));
     }
 
+    const BreakTimeSet = (time) => {
+        addToDb(time)
+        setBreakTime(time)
+
+    }
 
 
     return (
@@ -57,8 +62,8 @@ const Sidebar = (props) => {
             <div className='mt-5 '>
                 <h4 className='px-3'>Add A Break</h4>
                 <div className='btns mt-3 d-flex justify-content-center'>
-                    <button onClick={() => addToDb(10)}>10s</button>
-                    <button onClick={() => addToDb(20)}>20s</button>
+                    <button onClick={() => BreakTimeSet(10)}>10s</button>
+                    <button onClick={() => BreakTimeSet(20)}>20s</button>
                     <button>30s</button>
                     <button>40s</button>
                     <button>50s</button>
@@ -70,7 +75,7 @@ const Sidebar = (props) => {
                 <Exercise_Time time={props.time}></Exercise_Time>
                 <div className='d-flex justify-content-between mx-4  exercise-time p-2 mt-4 '>
                     <h5>Break time</h5>
-                    <h5 className='mutedtext'>0 Second</h5>
+                    <h5 className='mutedtext'>{breakTime} Second</h5>
                 </div>
 
             </div>
