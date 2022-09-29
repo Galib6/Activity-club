@@ -2,8 +2,13 @@ import React, { useEffect, useState } from 'react';
 import "./Sidebar.css"
 import Button from 'react-bootstrap/Button';
 import Exercise_Time from '../Excercise_time/Exercise_Time';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Sidebar = (props) => {
+
+
+    const notify = () => toast("Congratulation! You are completed todays target");
 
     const [breakTime, setBreakTime] = useState(0)
 
@@ -77,7 +82,10 @@ const Sidebar = (props) => {
                 </div>
 
             </div>
-            <Button variant="primary" className='w-70 mt-5 mx-5'>Activity Completed</Button>
+            <div>
+                <Button variant="primary" className='w-70 mt-5 mx-5' onClick={notify}>Activity Completed</Button>
+                <ToastContainer />
+            </div>
         </div>
     );
 };
