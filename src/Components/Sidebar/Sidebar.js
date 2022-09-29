@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Sidebar = (props) => {
 
 
-    const notify = () => toast("Congratulation! You are completed todays target");
+    const notify = () => toast("Congratulation! You have completed today's target.");
 
     const [breakTime, setBreakTime] = useState(0)
 
@@ -37,7 +37,7 @@ const Sidebar = (props) => {
 
     }
     return (
-        <div className='side-bar '>
+        <div className='side-bar'>
             <div className='mt-5 d-flex mx-3 '>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAzwgGkG6GwjSrYOghY42bRUJWRwwRaI0M2w&usqp=CAU" className='profile-picture' alt="" />
                 <div className='d-flex flex-column ms-2'>
@@ -64,19 +64,19 @@ const Sidebar = (props) => {
 
             <div className='mt-5 order '>
                 <h4 className='px-3'>Add A Break</h4>
-                <div className='btns mt-3 d-flex justify-content-center'>
-                    <button onClick={() => BreakTimeSet(10)}>10s</button>
-                    <button onClick={() => BreakTimeSet(20)}>20s</button>
-                    <button onClick={() => BreakTimeSet(30)}>30s</button>
-                    <button onClick={() => BreakTimeSet(40)}>40s</button>
-                    <button onClick={() => BreakTimeSet(50)}>50s</button>
+                <div className='btns mt-3 d-flex justify-content-center '>
+                    <button className="border border-primary" onClick={() => BreakTimeSet(10)}>10s</button>
+                    <button className=" border border-primary" onClick={() => BreakTimeSet(20)}>20s</button>
+                    <button className=" border border-primary" onClick={() => BreakTimeSet(30)}>30s</button>
+                    <button className=" border border-primary" onClick={() => BreakTimeSet(40)}>40s</button>
+                    <button className=" border border-primary" onClick={() => BreakTimeSet(50)}>50s</button>
                 </div>
             </div>
 
             <div className='mt-4 '>
                 <h4 className='mx-3'>Exercise Details</h4>
                 <Exercise_Time time={props.time}></Exercise_Time>
-                <div className='d-flex justify-content-between mx-4  exercise-time p-2 mt-4 '>
+                <div className='d-flex justify-content-between mx-4  exercise-time p-2 mt-4 border border-primary'>
                     <h5>Break time</h5>
                     <h5 className='mutedtext'>{breakTime} Second</h5>
                 </div>
