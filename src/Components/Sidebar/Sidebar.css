@@ -30,3 +30,11 @@
 .mutedtext {
     color: rgb(90, 89, 89);
 }
+
+.side-bar {
+    position: fixed;
+    right: 1%;
+    width: 19%;
+
+
+}

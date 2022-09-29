@@ -31,8 +31,6 @@ const Sidebar = (props) => {
         setBreakTime(time)
 
     }
-
-
     return (
         <div className='side-bar '>
             <div className='mt-5 d-flex mx-3 '>
@@ -44,17 +42,17 @@ const Sidebar = (props) => {
             </div>
 
             <div className='d-flex justify-content-center mt-4 spec align-items-center mx-2 w-100 border border-primary'>
-                <div className='d-flex flex-column px-3 '>
-                    <h4 >75kg</h4>
-                    <p >Weight</p>
+                <div className='d-flex flex-column px-3 pt-3 '>
+                    <h4 className='text-center'>75kg</h4>
+                    <p className='text-center'>Weight</p>
                 </div>
-                <div className='d-flex flex-column px-3'>
-                    <h4 >6.5</h4>
-                    <p >Height</p>
+                <div className='d-flex flex-column pt-3 px-3'>
+                    <h4 className='text-center'>6.5</h4>
+                    <p className='text-center'>Height</p>
                 </div>
-                <div className='d-flex flex-column px-3'>
-                    <h4>25yrs</h4>
-                    <p >Age</p>
+                <div className='d-flex flex-column pt-3 px-3'>
+                    <h4 className='text-center'>25yrs</h4>
+                    <p className='text-center'>Age</p>
                 </div>
 
             </div>
@@ -64,9 +62,9 @@ const Sidebar = (props) => {
                 <div className='btns mt-3 d-flex justify-content-center'>
                     <button onClick={() => BreakTimeSet(10)}>10s</button>
                     <button onClick={() => BreakTimeSet(20)}>20s</button>
-                    <button>30s</button>
-                    <button>40s</button>
-                    <button>50s</button>
+                    <button onClick={() => BreakTimeSet(30)}>30s</button>
+                    <button onClick={() => BreakTimeSet(40)}>40s</button>
+                    <button onClick={() => BreakTimeSet(50)}>50s</button>
                 </div>
             </div>
 

@@ -1,11 +1,27 @@
-.title {
-    color: #0076CE;
-    margin-top: 100px;
+.title img {
+    height: 100px;
+    width: 100px;
 
 }
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1 {
+    color: rgb(165, 42, 42);
+}
+
 
 .activity-container {
-    padding: 0px 100px;
+    padding: 0px 50px;
     background-color: lightgray;
 
+
 }
+
+/* .rows {
+    position: relative;
+} */
