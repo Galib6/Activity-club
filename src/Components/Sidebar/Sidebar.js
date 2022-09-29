@@ -7,11 +7,10 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Sidebar = (props) => {
 
-
+    // Toast Function >>>>>>>>>>>>>>>>>>
     const notify = () => toast("Congratulation! You have completed today's target.");
 
     const [breakTime, setBreakTime] = useState(0)
-
     useEffect(() => {
         const breakTimeInfoStrigified = localStorage.getItem('break-Time-Info');
         if (breakTimeInfoStrigified) {
@@ -20,21 +19,17 @@ const Sidebar = (props) => {
             setBreakTime(breaKTime)
         }
     }, [])
-
-    console.log(breakTime)
-
-    // Add to Db  
+    // console.log(breakTime)
+    // Add to Db >>>>>>>>>>>>>>>>>> 
     const addToDb = (time) => {
         const breakTimeInfo = {}
         breakTimeInfo[1] = time;
         console.log(breakTimeInfo)
         localStorage.setItem('break-Time-Info', JSON.stringify(breakTimeInfo));
     }
-
     const BreakTimeSet = (time) => {
         addToDb(time)
         setBreakTime(time)
-
     }
     return (
         <div className='side-bar'>
@@ -72,7 +67,6 @@ const Sidebar = (props) => {
                     <button className=" border border-primary" onClick={() => BreakTimeSet(50)}>50s</button>
                 </div>
             </div>
-
             <div className='mt-4 '>
                 <h4 className='mx-3'>Exercise Details</h4>
                 <Exercise_Time time={props.time}></Exercise_Time>
