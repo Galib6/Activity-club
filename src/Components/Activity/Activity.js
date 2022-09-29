@@ -3,7 +3,6 @@ import "./Activity.css"
 import Row from 'react-bootstrap/Row';
 import Cards from '../Cards/Cards';
 
-
 const Activity = (props) => {
     const [activities, setActivity] = useState([])
 
@@ -12,8 +11,6 @@ const Activity = (props) => {
             .then(res => res.json())
             .then(data => setActivity(data))
     }, [])
-
-
     return (
         <div className='activity-container'>
             <div className='title'>
