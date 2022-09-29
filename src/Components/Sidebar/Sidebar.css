@@ -1,0 +1,32 @@
+.profile-picture {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+.spec {
+    background-color: rgb(238, 235, 235);
+    border-radius: 20px;
+}
+
+.btns button {
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin: 0px 6px;
+    border-radius: 50%;
+
+}
+
+.btns button:hover {
+    background-color: paleturquoise;
+}
+
+.exercise-time {
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.mutedtext {
+    color: rgb(90, 89, 89);
+}
