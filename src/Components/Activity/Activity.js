@@ -12,7 +12,7 @@ const Activity = (props) => {
             .then(data => setActivity(data))
     }, [])
     return (
-        <div className='activity-container'>
+        <div className='activity-container '>
             <div className='title'>
                 <img src="mus.png" alt="" />
                 <h1 >Fitness-Master</h1>
@@ -29,13 +29,18 @@ const Activity = (props) => {
             </Row>
             <div className='mt-5 border border-primary bg-white rounded p-3'>
                 <h4>Question : How Does react work ?</h4>
-                <p>Answer :ReactJS divides the UI into isolated reusable pieces of code known as components. React components work similarly to JavaScript functions as they accept arbitrary inputs called properties or props.</p>
+                <p>Answer: ReactJS divides the UI into isolated reusable pieces of code known as components. React components work similarly to JavaScript functions as they accept arbitrary inputs called properties or props</p>
                 <h4>Question : Diffrences between Props vs State ?</h4>
                 <p>Answer : Props are used to pass data from one component to another. The state is a local data storage that is local to the component only and cannot be passed to other components. The this.setState property is used to update the state values in the component.</p>
                 <h4>Question : Whats are used istead of useEffect ?</h4>
-                <p>Answer : There are two React hooks, useEffect and useLayoutEffect, that appear to work pretty much the same.But they’re not quite the same. Read on for what makes them different and when to use each. </p>
+                <p>Answer : Running once on mount: fetch API data<br />
+                    1.Running on state change: validating input field <br />
+                    2.Running on state change: live filtering<br />
+                    3.Running on state change: trigger animation on new array value<br />
+                    4.Running on props change: update paragraph list on fetched API data update<br />
+                    5.Running on props change: updating fetched API data to get BTC updated price </p>
             </div>
-        </div>
+        </div >
     );
 };
 

@@ -33,24 +33,24 @@ const Sidebar = (props) => {
     }
     return (
         <div className='side-bar'>
-            <div className='mt-5 d-flex mx-3 '>
+            <div className='mt-3 d-flex mx-3 '>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAzwgGkG6GwjSrYOghY42bRUJWRwwRaI0M2w&usqp=CAU" className='profile-picture' alt="" />
-                <div className='d-flex flex-column ms-2'>
+                <div className='d-flex flex-column mx-2 '>
                     <h5 className='text-primary'>Asadullah Al  Galib</h5>
                     <p className='p'>Savar, Dhaka</p>
                 </div>
             </div>
 
-            <div className='d-flex justify-content-center mt-4 spec align-items-center w-80 border border-primary'>
-                <div className='d-flex flex-column pt-3 px-3 '>
+            <div className='d-flex justify-content-center mt-4 spec align-items-center w-100 border border-primary'>
+                <div className='d-flex flex-column pt-3 px-2 '>
                     <h4 className='text-center'>75KG</h4>
                     <p className='text-center'>Weight</p>
                 </div>
-                <div className='d-flex flex-column pt-3 px-3'>
+                <div className='d-flex flex-column pt-3 px-2'>
                     <h4 className='text-center'>6.5Ft</h4>
                     <p className='text-center'>Height</p>
                 </div>
-                <div className='d-flex flex-column pt-3 px-3'>
+                <div className='d-flex flex-column pt-3 px-2'>
                     <h4 className='text-center'>25Years</h4>
                     <p className='text-center'>Age</p>
                 </div>
@@ -58,7 +58,7 @@ const Sidebar = (props) => {
             </div>
 
             <div className='mt-5 order '>
-                <h4 className='px-3'>Add A Break</h4>
+                <h4 className='mx-3'>Add A Break</h4>
                 <div className='btns mt-3 d-flex justify-content-center '>
                     <button className="border border-primary" onClick={() => BreakTimeSet(10)}>10s</button>
                     <button className=" border border-primary" onClick={() => BreakTimeSet(20)}>20s</button>
@@ -77,7 +77,7 @@ const Sidebar = (props) => {
 
             </div>
             <div className='d-flex justify-content-center'>
-                <Button variant="primary" className='w-70 mt-5 mx-5' onClick={notify}>Activity Completed</Button>
+                <Button variant="primary" className='w-70 my-5' onClick={notify}>Activity Completed</Button>
                 <ToastContainer />
             </div>
         </div>
